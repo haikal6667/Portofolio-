@@ -25,7 +25,7 @@
             font-family: 'Orbitron', sans-serif;
         }
 
-        /* Neon Glow Effects */
+        /* Efek Glow Neon */
         .neon-text {
             text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
         }
@@ -47,7 +47,7 @@
             border-left-width: 8px;
         }
 
-        /* Scroll Reveal Animation */
+        /* Animasi Muncul saat Scroll */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -59,7 +59,7 @@
             transform: translateY(0);
         }
 
-        /* Cyberpunk Grid Background */
+        /* Background Grid Cyberpunk */
         .grid-bg {
             background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
                               linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
@@ -72,7 +72,7 @@
             z-index: -2;
         }
 
-        /* Floating Tech Icons Background */
+        /* Background Ikon Mengapung */
         .floating-bg {
             position: fixed;
             top: 0;
@@ -144,7 +144,7 @@
             min-height: 1.2em;
         }
 
-        /* Inner Scanline Effect for Terminal Cards */
+        /* Efek Scanline Internal untuk Kartu Terminal */
         .terminal-card {
             position: relative;
             overflow: hidden;
@@ -170,7 +170,7 @@
             100% { top: 105%; opacity: 0; }
         }
 
-        /* Cover Photo Styles */
+        /* Gaya Banner Hero */
         .hero-banner {
             width: 100%;
             height: 40vh;
@@ -195,6 +195,32 @@
             height: 50%;
             background: linear-gradient(to top, var(--cyber-dark), transparent);
         }
+
+        /* Tombol Cyber */
+        .btn-cyber {
+            background: white;
+            color: black;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-cyber:hover {
+            box-shadow: 0 0 20px #fff;
+            transform: scale(1.05);
+        }
+
+        .btn-outline-cyber {
+            border: 1px solid white;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-cyber:hover {
+            background: white;
+            color: black;
+            box-shadow: 0 0 15px #fff;
+        }
     </style>
 </head>
 <body>
@@ -202,12 +228,13 @@
     <div id="floating-bg" class="floating-bg"></div>
     <div class="scanline"></div>
 
-    <!-- Navigation -->
+    <!-- Navigasi -->
     <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-lg border-b border-white/10 px-6 py-4">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <span class="font-cyber text-xl tracking-widest neon-text"></span>
             <div class="hidden md:flex space-x-8 text-sm font-cyber uppercase tracking-tighter">
                 <a href="#profil" class="hover:text-white transition">Profil</a>
+                <a href="#pendidikan" class="hover:text-white transition">Pendidikan</a>
                 <a href="#pengalaman" class="hover:text-white transition">Pengalaman</a>
                 <a href="#kemampuan" class="hover:text-white transition">Skill</a>
                 <a href="#kontak" class="hover:text-white transition">Kontak</a>
@@ -215,7 +242,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Bagian Hero -->
     <section class="min-h-screen flex flex-col items-center text-center">
         <!-- Foto Sampul -->
         <div class="hero-banner reveal">
@@ -224,7 +251,7 @@
         </div>
 
         <!-- Profil & Nama -->
-        <div class="-mt-20 md:-mt-28 z-10 px-4">
+        <div class="-mt-20 md:-mt-28 z-10 px-4 w-full">
             <div class="relative reveal inline-block mb-6">
                 <div class="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-white neon-border overflow-hidden bg-zinc-900 group">
                     <img src="https://cdn.phototourl.com/free/2026-04-16-3072d36c-464d-4acd-b995-f68470d52c8a.webp" alt="Haikal Akbar Profil" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -233,8 +260,18 @@
             </div>
             
             <h1 id="name-glitch" class="text-4xl md:text-8xl font-bold uppercase tracking-tighter neon-text mb-2 scramble-text block" data-text="Haikal Akbar">Haikal Akbar</h1>
-            <p class="font-cyber text-zinc-400 tracking-widest md:text-xl reveal">MULTITALENTED | Proactive & Growth-Oriented | Ready to Make Maximum Contribution</p>
+            <p class="font-cyber text-zinc-400 tracking-widest md:text-xl reveal mb-8">MULTITALENTED | Proactive & Growth-Oriented | Ready to Make Maximum Contribution</p>
             
+            <!-- Tombol Download CV -->
+            <div class="reveal">
+                <a href="https://drive.google.com/file/d/12d1581L-l6If6f-f_qGdjNvakSBEPTJJ/view?usp=drivesdk" target="_blank" class="btn-cyber px-8 py-4 inline-flex items-center gap-3 uppercase tracking-[0.2em] text-xs font-bold rounded-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    Unduh CV Lengkap
+                </a>
+            </div>
+
             <div class="mt-8 flex justify-center space-x-4 reveal">
                 <div class="h-1 w-24 bg-white animate-pulse"></div>
                 <div class="h-1 w-6 bg-white/30"></div>
@@ -245,7 +282,7 @@
 
     <div class="max-w-5xl mx-auto px-6 space-y-24 pb-32">
         
-        <!-- Photo Documentation Grid (Before Profil) -->
+        <!-- Grid Dokumentasi Foto -->
         <section class="reveal">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="img-container neon-border aspect-[4/5] rounded overflow-hidden">
@@ -263,7 +300,7 @@
             </div>
         </section>
 
-        <!-- Profil Section -->
+        <!-- Bagian Profil -->
         <section id="profil" class="reveal">
             <div class="flex items-center mb-8">
                 <h2 class="text-3xl font-cyber neon-text mr-4 italic">01 // PROFIL</h2>
@@ -272,26 +309,72 @@
             <div class="neon-card p-8 custom-shape terminal-card">
                 <div class="inner-scanline"></div>
                 <p class="leading-relaxed text-zinc-300 relative z-10">
-                    Lulusan SMA yang memiliki pengalaman dibidang Ritel dan manajemen bisnis usaha F&B milik keluarga. Memiliki kemampuan mengoperasikan Microsoft Office dan Sitem POS (Point Of Sales) serta keterampilan dalam melayani pelanggan dengan ramah dan sopan. Memiliki sikap disiplin, jujur, dan bertanggung jawab dalam bekerja. Saya berminat untuk bekerja diberbagai bidang dan siap memberikan kontribusi positif serta berkembang bersama perusahaan.
+                    Lulusan SMA yang memiliki pengalaman dibidang Ritel dan manajemen bisnis usaha F&B milik keluarga. Memiliki kemampuan mengoperasikan Microsoft Office dan Sistem POS (Point Of Sales) serta keterampilan dalam melayani pelanggan dengan ramah dan sopan. Memiliki sikap disiplin, jujur, dan bertanggung jawab dalam bekerja. Saya berminat untuk bekerja diberbagai bidang dan siap memberikan kontribusi positif serta berkembang bersama perusahaan.
                 </p>
             </div>
         </section>
 
-        <!-- Pendidikan Section -->
-        <section class="reveal">
+        <!-- Bagian Pendidikan -->
+        <section id="pendidikan" class="reveal">
             <div class="flex items-center mb-8">
-                <h2 class="text-3xl font-cyber neon-text mr-4 italic">02 // PENDIDIKAN</h2>
+                <h2 class="text-3xl font-cyber neon-text mr-4 italic">02 // PENDIDIKAN & SERTIFIKASI</h2>
                 <div class="flex-grow h-px bg-white/20"></div>
             </div>
-            <div class="neon-card p-6 border-l-2 border-white terminal-card">
-                <div class="inner-scanline"></div>
-                <h3 class="text-xl font-bold font-cyber text-white relative z-10">MAN 2 CIANJUR</h3>
-                <p class="text-zinc-500 text-sm font-cyber mb-2 relative z-10">2019 - 2022</p>
-                <p class="text-zinc-300 relative z-10">Jurusan IPS, Nilai Akhir 84</p>
+            
+            <div class="grid gap-8">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Sekolah -->
+                    <div class="neon-card p-6 border-l-2 border-white terminal-card">
+                        <div class="inner-scanline"></div>
+                        <h3 class="text-xl font-bold font-cyber text-white relative z-10">MAN 2 CIANJUR</h3>
+                        <p class="text-zinc-500 text-sm font-cyber mb-2 relative z-10">2019 - 2022</p>
+                        <p class="text-zinc-300 relative z-10">Jurusan IPS, Nilai Akhir 84</p>
+                    </div>
+
+                    <!-- Sertifikat -->
+                    <div class="neon-card p-6 border-l-2 border-white terminal-card bg-white/5">
+                        <div class="inner-scanline"></div>
+                        <div class="flex flex-col h-full relative z-10">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-bold font-cyber text-white">SERTIFIKAT KOMPETENSI</h3>
+                                    <p class="text-zinc-500 text-sm font-cyber mb-2 uppercase">Teknik Bisnis Sepeda Motor</p>
+                                    <p class="text-zinc-300 text-xs">Diterbitkan oleh: MAN 2 CIANJUR</p>
+                                </div>
+                                <svg class="w-8 h-8 text-white opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-1.947 3.42 3.42 0 016.438 0 3.42 3.42 0 001.946 1.947 3.42 3.42 0 010 6.438 3.42 3.42 0 00-1.946 1.946 3.42 3.42 0 01-6.438 0 3.42 3.42 0 00-1.946-1.946 3.42 3.42 0 010-6.438z"></path>
+                                </svg>
+                            </div>
+                            <div class="mt-auto">
+                                <a href="https://drive.google.com/file/d/1_2UIxURAiOR3a22K0n1FiCMhofg77tvE/view?usp=drivesdk" target="_blank" class="btn-outline-cyber px-4 py-2 text-[10px] uppercase tracking-widest inline-flex items-center gap-2">
+                                    <span>Lihat Sertifikat</span>
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dokumentasi Sertifikat -->
+                <div class="p-6 bg-white/5 border border-white/10 rounded-lg reveal">
+                    <h4 class="font-cyber text-xs text-zinc-500 mb-4 tracking-[0.3em]"></h4>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <!-- Ganti URL di bawah dengan foto saat pelatihan atau foto sertifikat fisik kamu -->
+                        <div class="img-container aspect-video rounded border border-white/20">
+                            <img src="https://cdn.phototourl.com/free/2026-04-17-6c7dcd1b-368f-40e3-bada-784dad6fdea7.jpg" alt="Dokumentasi Sertifikasi 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="img-container aspect-video rounded border border-white/20">
+                            <img src="https://cdn.phototourl.com/free/2026-04-17-43f516ae-950e-4fcc-ab50-5a494c91be56.jpg" alt="Dokumentasi Sertifikasi 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="img-container aspect-video rounded border border-white/20 hidden md:block">
+                            <img src="https://cdn.phototourl.com/free/2026-04-17-3e4d95f9-3d82-4cd3-a140-c533580a80dc.jpg" alt="Dokumentasi Sertifikasi 3" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Pengalaman Section (Text Only) -->
+        <!-- Bagian Pengalaman -->
         <section id="pengalaman" class="reveal">
             <div class="flex items-center mb-8">
                 <h2 class="text-3xl font-cyber neon-text mr-4 italic">03 // PENGALAMAN</h2>
@@ -299,7 +382,7 @@
             </div>
             
             <div class="space-y-12">
-                <!-- Job 1 -->
+                <!-- Pekerjaan 1 -->
                 <div class="relative pl-8 border-l border-white/20">
                     <div class="absolute -left-1.5 top-0 w-3 h-3 bg-white rounded-full neon-border"></div>
                     <div class="terminal-card bg-zinc-900/20 p-6 rounded-lg border border-white/5">
@@ -309,37 +392,35 @@
                             <p class="text-zinc-500 font-bold uppercase tracking-wider text-sm">Crew Store | 02/2023 - 09/2023</p>
                         </div>
                         <ul class="space-y-3 text-zinc-400 text-sm md:text-base relative z-10">
-                            <li class="flex items-start"><span class="mr-2 text-white">■</span> Menyambut pelanggan, memberikan informasi produk, dan memproses transaksi tunai/non-tunai dengan akurasi 100% menggunakan sistem POS (Point Of Sales) pada komputer.</li>
-                            <li class="flex items-start"><span class="mr-2 text-white">■</span> Melakukan display produk sesuai planogram dan prinsip FEFO (First Expired First Out) secara berkala untuk meminimalisir barang expired.</li>
+                            <li class="flex items-start"><span class="mr-2 text-white">■</span> Menyambut pelanggan, memberikan informasi produk, dan memproses transaksi tunai/non-tunai dengan akurasi 100% menggunakan sistem POS pada komputer.</li>
+                            <li class="flex items-start"><span class="mr-2 text-white">■</span> Melakukan display produk sesuai planogram dan prinsip FEFO (First Expired First Out).</li>
                             <li class="flex items-start"><span class="mr-2 text-white">■</span> Bertanggung jawab atas stock opname harian dan pengecekan barang rawan hilang.</li>
                             <li class="flex items-start"><span class="mr-2 text-white">■</span> Mengelola kebersihan dan kerapian area kerja (rak, lantai, dan gudang).</li>
-                            <li class="flex items-start"><span class="mr-2 text-white">■</span> Melayani lebih dari 15 pesanan online konsumen di aplikasi SAPA dan memproses retur barang.</li>
-                            <li class="flex items-start"><span class="mr-2 text-white">■</span> Menerima dan membongkar lebih dari 30 container barang dari DC.</li>
+                            <li class="flex items-start"><span class="mr-2 text-white">■</span> Menerima barang kiriman, dan membongkar kurang lebih 30 container barang dari DC.</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Job 2 -->
+                <!-- Pekerjaan 2 -->
                 <div class="relative pl-8 border-l border-white/20">
                     <div class="absolute -left-1.5 top-0 w-3 h-3 bg-white rounded-full neon-border"></div>
                     <div class="terminal-card bg-zinc-900/20 p-6 rounded-lg border border-white/5">
                         <div class="inner-scanline"></div>
                         <div class="mb-4 relative z-10">
                             <h3 class="text-2xl font-cyber text-white uppercase">Saung King</h3>
-                            <p class="text-zinc-500 font-bold uppercase tracking-wider text-sm">Pengelola Oprasional | 10/2023 - 12/2024</p>
+                            <p class="text-zinc-500 font-bold uppercase tracking-wider text-sm">Pengelola Operasional | 10/2023 - 12/2024</p>
                         </div>
                         <ul class="space-y-3 text-zinc-400 text-sm md:text-base relative z-10">
-                            <li class="flex items-start"><span class="mr-2 text-white">■</span> Bertanggung jawab dalam manajemen dan bisnis toko/warung milik keluarga dengan omset kurang lebih 20.000.000 setiap bulan.</li>
-                            <li class="flex items-start"><span class="mr-2 text-white">■</span> Melayani lebih dari 15 pelanggan setiap hari.</li>
-                            <li class="flex items-start"><span class="mr-2 text-white">■</span> Menyediakan dan menyajikan makanan kepada pelanggan beberapa produk instan, seperti Mie Instan, Kopi Sachet, dan makanan dengan proses pembuatan seperti Sate, Sup Ayam, Sup Kambing, Tongseng, Soto, Nasi Goreng dan lain-lain.</li>
-                            <li class="flex items-start"><span class="mr-2 text-white">■</span> Menerima dan menyelesaikan aduan pelanggan dengan cepat dan sopan, mengambil kesempatan ini untuk meningkatkan kualitas pelayanan.</li>
+                            <li class="flex items-start"><span class="mr-2 text-white">■</span> Manajemen operasional harian warung F&B keluarga dengan omset +/- Rp 20.000.000/bulan.</li>
+                            <li class="flex items-start"><span class="mr-2 text-white">■</span> Mengelola stok bahan baku dan menjaga standar kualitas penyajian makanan.</li>
+                            <li class="flex items-start"><span class="mr-2 text-white">■</span> Melayani pelanggan dan menangani aduan untuk meningkatkan kepuasan konsumen.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Kemampuan Section -->
+        <!-- Bagian Kemampuan -->
         <section id="kemampuan" class="reveal">
             <div class="flex items-center mb-8">
                 <h2 class="text-3xl font-cyber neon-text mr-4 italic">04 // KEMAMPUAN</h2>
@@ -354,7 +435,7 @@
                     <div class="grid grid-cols-2 gap-4 relative z-10">
                         <div class="p-3 border border-white/5 rounded font-cyber text-[10px] hover:bg-white hover:text-black transition uppercase text-center flex items-center justify-center">Microsoft Office</div>
                         <div class="p-3 border border-white/5 rounded font-cyber text-[10px] hover:bg-white hover:text-black transition uppercase text-center flex items-center justify-center">Sistem POS</div>
-                        <div class="p-3 border border-white/5 rounded font-cyber text-[10px] hover:bg-white hover:text-black transition uppercase text-center flex items-center justify-center">Data Entry & Reporting</div>
+                        <div class="p-3 border border-white/5 rounded font-cyber text-[10px] hover:bg-white hover:text-black transition uppercase text-center flex items-center justify-center">Teknik Sepeda Motor</div>
                         <div class="p-3 border border-white/5 rounded font-cyber text-[10px] hover:bg-white hover:text-black transition uppercase text-center flex items-center justify-center">Manajemen Stok</div>
                         <div class="p-3 border border-white/5 rounded font-cyber text-[10px] hover:bg-white hover:text-black transition uppercase text-center flex items-center justify-center">Administrasi</div>
                         <div class="p-3 border border-white/5 rounded font-cyber text-[10px] hover:bg-white hover:text-black transition uppercase text-center flex items-center justify-center">Customer Service</div>
@@ -376,14 +457,14 @@
             </div>
         </section>
 
-        <!-- Kontak Section -->
+        <!-- Bagian Kontak -->
         <section id="kontak" class="reveal">
             <div class="flex items-center mb-8">
                 <h2 class="text-3xl font-cyber neon-text mr-4 italic">05 // HUBUNGI</h2>
                 <div class="flex-grow h-px bg-white/20"></div>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-[10px] font-cyber">
-                <!-- Location -->
+                <!-- Lokasi -->
                 <div class="p-6 border border-white/10 bg-zinc-950 terminal-card text-center flex flex-col items-center justify-center group hover:border-white transition-all cursor-default">
                     <div class="inner-scanline"></div>
                     <svg class="w-8 h-8 mb-3 text-zinc-500 group-hover:text-white transition relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -433,7 +514,7 @@
     </footer>
 
     <script>
-        // --- Scramble Text Logic ---
+        // --- Logika Scramble Text ---
         class TextScramble {
           constructor(el) {
             this.el = el;
@@ -488,26 +569,22 @@
           }
         }
 
-        // --- Particle Background Logic ---
+        // --- Logika Partikel Background ---
         function createParticles() {
             const container = document.getElementById('floating-bg');
             const symbols = [
-                '</>', '{ }', '0101', '1010', '/>', '>_', 'SYS', 
-                '<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>',
-                '<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
-                '<svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>'
+                '</>', '{ }', '0101', '1010', '/>', '>_', 'SYS', 'TECH'
             ];
-            const particleCount = 25; // Jumlah ikon yang berterbangan
+            const particleCount = 25;
 
             for (let i = 0; i < particleCount; i++) {
                 let particle = document.createElement('div');
                 particle.className = 'tech-particle';
                 particle.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
 
-                // Mengacak posisi, ukuran, dan kecepatan
                 let left = Math.random() * 100;
                 let size = Math.random() * 1.5 + 0.8;
-                let duration = Math.random() * 20 + 15; // Kecepatan melayang (15s - 35s)
+                let duration = Math.random() * 20 + 15;
                 let delay = Math.random() * 20;
 
                 particle.style.left = `${left}vw`;
@@ -519,7 +596,7 @@
             }
         }
 
-        // --- Initialization ---
+        // --- Inisialisasi ---
         window.onload = () => {
           const el = document.getElementById('name-glitch');
           const fx = new TextScramble(el);
@@ -527,12 +604,11 @@
           
           const runAnimation = () => {
             fx.setText(name).then(() => {
-              setTimeout(runAnimation, 2500); // Ulangi efek pergerakan huruf setiap 2.5 detik
+              setTimeout(runAnimation, 2500);
             });
           };
 
           setTimeout(runAnimation, 500);
-
           createParticles();
           reveal();
         };
@@ -553,3 +629,5 @@
     </script>
 </body>
 </html>
+
+```
